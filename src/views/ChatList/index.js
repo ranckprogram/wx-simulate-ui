@@ -1,12 +1,27 @@
 import React, { } from 'react';
-import './styles.modules.css'
-import Header from '../../components/Header';
+import styles from './styles.module.css'
+import Header from '@/components/Header';
 
 function ChatList () {
     return (
-        <div className='content'>
+        <div className={styles.content}>
             <Header />
-            ChatList
+            <div>
+                <ul>
+                    <li>
+                        <div>
+                            <i className={styles.avatar}></i>
+                            <div>
+                                <h3>ranck</h3>
+                                <p>content</p>
+                            </div>
+                            <time>
+                                9:10
+                            </time>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     )
 }

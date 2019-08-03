@@ -1,0 +1,14 @@
+.menu {
+    display: flex;
+    height: .8rem;
+    line-height: .8rem;
+    text-align: center;
+}
+
+.menu li {
+    flex: 1;
+}
+
+.active {
+    color: #59c759;
+}

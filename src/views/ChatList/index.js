@@ -1,8 +1,9 @@
 import React, { } from 'react';
+import  './styles.modules.css'
 
 function ChatList() {
     return (
-        <div>
+        <div className='content'>
             ChatList
         </div>
     )

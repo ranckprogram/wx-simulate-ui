@@ -1,12 +1,13 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
+import ChatList from '../views/ChatList'
 
 function Router() {
     return (
-        <div>
-            router
-        </div>
+        <HashRouter>
+            <Route to="/" component={ChatList}/>  
+        </HashRouter>
     );
 }
 
-export default Router
+export default Router;

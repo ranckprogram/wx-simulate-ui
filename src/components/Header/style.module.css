@@ -1,5 +1,42 @@
 .header {
   position: relative;
+  display: flex;
+  align-items: center;
   height: .8rem;
+  padding: 0 .2rem;
 }
 
+.icon {
+  display: block;
+  width: .4rem;
+  height: .4rem;
+  text-align: center;
+  line-height: .4rem;
+}
+
+.back {
+  margin-right: .1rem;
+}
+
+.title {
+
+}
+
+.input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  background: none;
+  outline: none;
+}
+
+.headerRight {
+  display: flex;
+  width: 1rem;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.headerRight {
+
+}

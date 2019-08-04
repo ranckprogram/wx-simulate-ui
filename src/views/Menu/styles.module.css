@@ -1,8 +1,11 @@
 .menu {
     display: flex;
-    height: .8rem;
+    height: 1rem;
     line-height: .8rem;
     text-align: center;
+    align-items: center;
+    border-top: .5px solid #ddd;
+    background: #f9f9f9;
 }
 
 .menu li {

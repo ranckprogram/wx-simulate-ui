@@ -7,6 +7,7 @@
 .listItem {
   position: relative;
   display: flex;
+  background: #fff;
 }
 
 .listItem:hover {
@@ -23,6 +24,10 @@
   justify-content: center;
 }
 
+.listItem:last-child .itemMiddle {
+  border-bottom: 0;
+}
+
 .listItem .avatar {
   padding: .2rem;
 }
@@ -37,7 +42,7 @@
   font-size: .3rem;
   color: #999;
   max-width: 5rem;
-  margin-top: .2rem;
+  margin-top: .1rem;
 }
 
 .listItem .time {

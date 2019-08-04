@@ -25,7 +25,7 @@ function AddressList () {
         dataSource={data}
         renderItem={item => <List.Item data={1}>
           <List.Item.Meta
-            avatar={<Avatar />}
+            avatar={<Avatar size="middle"/>}
             title={item.title}
             content={item.content}
             time={item.time}

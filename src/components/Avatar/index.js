@@ -1,9 +1,12 @@
 import React from 'react';
 import styles from './styles.module.css'
 import avatar from './avatar.jpeg'
-function Avatar () {
+function Avatar (props) {
+  const { src, size } = props;
+  const jpg = src || avatar;
+
   return (
-    <i className={styles.avatar} style={{backgroundImage: `url(${avatar})`}}></i>
+    <i className={`${styles.avatar} ${styles[size]}`} style={{ backgroundImage: `url(${jpg})` }}></i>
   );
 }
 export default Avatar;

@@ -3,7 +3,7 @@ import styles from './list.module.css'
 
 function List (props) {
   const Item = props.renderItem
-  return (<div className={styles.list}>
+  return (<div>
     <ul>
       {
         props.dataSource.map(item => <Item key={item.id} {...item} />)

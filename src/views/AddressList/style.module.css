@@ -1,0 +1,8 @@
+.userList h3{
+  padding: .1rem .2rem;
+}
+
+.group {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}

@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import {withRouter } from 'react-router-dom';
 import styles from './styles.module.css'
 function Menu (props) {
-    console.dir(withRouter)
-
     const menuList = [{
         url: '/chat/list',
         name: '微信',
@@ -19,10 +17,8 @@ function Menu (props) {
     }];
     const [current, setCurrent] = useState('/chat/list');
     function handleClick (item) {
-        console.log(item)
-        console.log(props)
-
-        setCurrent(item.url)
+        setCurrent(item.url);
+        props.history.push(item.url);
     }
     return (
         <div >

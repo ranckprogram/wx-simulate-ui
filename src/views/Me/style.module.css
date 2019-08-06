@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  padding: .6rem .4rem;
+  background: #fff;
+  margin-bottom: .2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.content {
+  flex: 1;
+  margin-left: .2rem;
+}
+
+.content h3 {
+  font-size: .4rem;
+  margin-bottom: .2rem;
+}
+.list > li{
+  margin-bottom: .2rem;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}

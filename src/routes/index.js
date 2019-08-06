@@ -4,6 +4,8 @@ import Header from '@/components/Header';
 import Menu from '@/views/Menu';
 import ChatList from '@/views/ChatList';
 import AddressList from '@/views/AddressList';
+import Found from '@/views/Found';
+
 import styles from './styles.module.css';
 
 function Router () {
@@ -17,6 +19,7 @@ function Router () {
                     <Switch>
                         <Route path="/chat/list" exact component={ChatList} />
                         <Route path="/address/list" component={AddressList} />
+                        <Route path="/found" component={Found} />
                     </Switch>
                 </div>
                 <Menu />

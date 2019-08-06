@@ -1,7 +1,6 @@
 .menu {
     display: flex;
     height: 1rem;
-    line-height: .8rem;
     text-align: center;
     align-items: center;
     border-top: .5px solid #ddd;

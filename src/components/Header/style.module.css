@@ -18,9 +18,7 @@
   margin-right: .1rem;
 }
 
-.title {
-
-}
+.title {}
 
 .input {
   width: 100%;
@@ -32,11 +30,12 @@
 
 .headerRight {
   display: flex;
-  width: 1rem;
+  width: 1.5rem;
   justify-content: center;
   margin-left: auto;
 }
 
-.headerRight {
-
+.headerRight>* {
+  flex: 1;
+  text-align: center;
 }

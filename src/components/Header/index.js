@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './style.module.css'
+import Icon from '@/components/Icon';
 function Header (props) {
     const hasBack = false;
     return (
@@ -8,9 +9,9 @@ function Header (props) {
             <h3 className={styles.title}>微信</h3>
             <input style={{ display: 'none' }} className={styles.input} placeholder="搜索" />
             <div className={styles.headerRight}>
-                <i className={styles.icon}>s</i>
-                <i className={styles.icon}>+</i>
-                <i className={styles.icon}>...</i>
+                <Icon type="iconbtn-search"/>
+                <Icon type="iconadd"/>
+                {/* <Icon type="iconbtn-search"/> */}
             </div>
         </div>
     );

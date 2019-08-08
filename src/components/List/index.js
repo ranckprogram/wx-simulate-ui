@@ -6,7 +6,7 @@ function List (props) {
   return (<div>
     <ul>
       {
-        props.dataSource.map(item => <Item key={item.id} {...item} />)
+        props.dataSource.map(item => <Item key={item.id || item.icon} {...item} />)
       }
     </ul>
   </div>);

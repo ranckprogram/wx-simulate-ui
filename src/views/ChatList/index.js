@@ -1,5 +1,4 @@
 import React, { } from 'react';
-import styles from './styles.module.css'
 import Avatar from '@/components/Avatar';
 import List from '@/components/List';
 

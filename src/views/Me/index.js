@@ -38,7 +38,7 @@ function Me () {
         </div>
       </div>
       <ul className={styles.list}>
-        {list.map(obj => <li>
+        {list.map((obj, index) => <li key={index}>
           <List
             dataSource={obj}
             renderItem={item => <List.Item data={1}>

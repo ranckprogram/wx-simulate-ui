@@ -13,14 +13,14 @@ function List (props) {
 }
 
 List.Item = function (props) {
-  return <li className={styles.listItem}>{props.children}</li>
+  return <li className={styles.listItem} {...props}>{props.children}</li>
 }
 
 List.Item.Meta = function (props) {
   return <>
-    <div className={styles.avatar}>
+    {props.avatar && <div className={styles.avatar}>
       {props.avatar}
-    </div>
+    </div>}
     <div className={styles.itemMiddle}>
       <div className={styles.title}>{props.title}</div>
       <div className={styles.content}>{props.content}</div>

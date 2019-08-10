@@ -1,0 +1,43 @@
+.clipBorder {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: .2rem;
+}
+
+.baseInfo {
+  display: flex;
+  padding: .2rem;
+  background: #fff;
+}
+
+.content {
+  flex: 1;
+  margin-left: .2rem;
+}
+
+.content h3 {
+  line-height: 1;
+  margin-bottom: .15rem;
+}
+
+.content p {
+  margin-bottom: .1rem;
+}
+
+.remark {
+  composes: clipBorder;
+  margin-bottom: .2rem;
+}
+
+.browseList {
+  composes: clipBorder;
+}
+
+.browseList>* {
+  padding-left: .2rem;
+}
+
+.callWayList {
+  composes: clipBorder;
+  text-align: center;
+}

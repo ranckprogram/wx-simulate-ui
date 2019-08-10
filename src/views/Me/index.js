@@ -41,7 +41,7 @@ function Me () {
         {list.map((obj, index) => <li key={index}>
           <List
             dataSource={obj}
-            renderItem={item => <List.Item data={1}>
+            renderItem={item => <List.Item>
               <List.Item.Meta
                 avatar={<Icon type={item.icon} />}
                 title={item.title}

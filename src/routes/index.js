@@ -6,6 +6,7 @@ import ChatList from '@/views/ChatList';
 import AddressList from '@/views/AddressList';
 import Found from '@/views/Found';
 import Me from '@/views/Me';
+import UserInfo from '@/views/UserInfo';
 
 import styles from './styles.module.css';
 
@@ -22,6 +23,7 @@ function Router () {
                         <Route path="/address/list" component={AddressList} />
                         <Route path="/found" component={Found} />
                         <Route path="/me" component={Me} />
+                        <Route path="/user/:id" component={UserInfo} />
                     </Switch>
                 </div>
                 <Menu />

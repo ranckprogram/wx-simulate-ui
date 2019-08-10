@@ -2,7 +2,7 @@ import React, { } from 'react';
 import Avatar from '@/components/Avatar';
 import List from '@/components/List';
 
-function ChatList () {
+function ChatList (props) {
     const data = [{
         id: 1,
         title: 'ranck',
@@ -17,11 +17,15 @@ function ChatList () {
         id: 3,
         title: 'nian',
     }];
-    
+
+    function handleGoSession (item) {
+        props.history.push(`/session/${item.id}`)
+    }
+
     return (
         <List
             dataSource={data}
-            renderItem={item => <List.Item data={1}>
+            renderItem={item => <List.Item onClick={() => { handleGoSession(item) }}>
                 <List.Item.Meta
                     avatar={<Avatar size="middle" />}
                     title={item.title}

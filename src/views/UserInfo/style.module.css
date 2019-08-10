@@ -26,11 +26,11 @@
 
 .remark {
   composes: clipBorder;
-  margin-bottom: .2rem;
 }
 
 .browseList {
   composes: clipBorder;
+  background: #fff;
 }
 
 .browseList>* {

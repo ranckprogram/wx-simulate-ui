@@ -1,0 +1,23 @@
+.content {
+    display: flex;
+    padding: .2rem;
+}
+
+.input {
+    flex: 1;
+    outline: none; 
+    border: 0;
+    padding: .08rem .12rem;
+    border-radius: .08rem;
+}
+
+.button {
+    display: block;
+    padding: .08rem .12rem;
+    border: none;
+    border-radius: .08rem;
+    outline: none; 
+    color: #fff;
+    background: #59c759;
+    margin-left: .2rem;
+}

@@ -8,10 +8,14 @@ import Found from '@/views/Found';
 import Me from '@/views/Me';
 import UserInfo from '@/views/UserInfo';
 import Session from '@/views/Session';
+import Footer from '@/components/Footer';
 
 import styles from './styles.module.css';
 
 function Router () {
+    function handleSend (text) {
+        console.log(text)
+    }
     return (
         <HashRouter>
             <div className={styles.wrapper}>
@@ -29,6 +33,7 @@ function Router () {
                     </Switch>
                 </div>
                 <Menu />
+                <Footer onSend={handleSend}/>
             </div>
         </HashRouter>
 

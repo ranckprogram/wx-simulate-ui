@@ -21,10 +21,14 @@ const config = [
   }, {
     path: '/user/:id',
     component: UserInfo,
+    meta: {
+      hasBack: true,
+    }
   },{
     path: '/session/:id',
     component: Session,
     meta: {
+      hasBack: true,
       footer: true,
     },
   },{

@@ -10,6 +10,11 @@ import styles from './styles.module.css';
 
 function Router (props) {
     const current = matchRoutes(config, props.location.pathname);
+    const metaInfo = current.length && current[0].route.meta;
+
+    function handleBack () {
+        props.history.goBack();
+    }
 
     function handleSend (text) {
         console.log(text)
@@ -18,7 +23,7 @@ function Router (props) {
     return (
         <div className={styles.wrapper}>
             <div >
-                <Header />
+                <Header hasBack={metaInfo && metaInfo.hasBack} onBack={handleBack} />
             </div>
             <div className={styles.content}>
                 <Switch>
@@ -28,12 +33,11 @@ function Router (props) {
             {
                 // 我的亲娘诶，这里怎么优化看起来才好看啊
                 (
-                    current.length &&
-                    current[0].route.meta &&
-                    current[0].route.meta.footer
+                    metaInfo &&
+                    metaInfo.footer
                 ) ?
                     <Footer onSend={handleSend} /> :
-                    <Menu />
+                    <Menu current={current[0].route.path} />
             }
 
         </div>

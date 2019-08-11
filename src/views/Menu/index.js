@@ -21,7 +21,7 @@ function Menu (props) {
         name: '我',
         icon: 'iconme',
     }];
-    const [current, setCurrent] = useState('/chat/list');
+    const [current, setCurrent] = useState(props.current || '/chat/list');
     function handleClick (item) {
         setCurrent(item.url);
         props.history.push(item.url);

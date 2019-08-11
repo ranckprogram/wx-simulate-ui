@@ -14,11 +14,11 @@
   line-height: .4rem;
 }
 
-.back {
-  margin-right: .1rem;
-}
+.back {}
 
-.title {}
+.title {
+  margin-left: .1rem;
+}
 
 .input {
   width: 100%;

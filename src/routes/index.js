@@ -1,43 +1,43 @@
 import React from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { Switch, withRouter } from 'react-router-dom';
+import { matchRoutes, renderRoutes } from "react-router-config";
+
 import Header from '@/components/Header';
 import Menu from '@/views/Menu';
-import ChatList from '@/views/ChatList';
-import AddressList from '@/views/AddressList';
-import Found from '@/views/Found';
-import Me from '@/views/Me';
-import UserInfo from '@/views/UserInfo';
-import Session from '@/views/Session';
 import Footer from '@/components/Footer';
-
+import config from './config';
 import styles from './styles.module.css';
 
-function Router () {
+function Router (props) {
+    const current = matchRoutes(config, props.location.pathname);
+
     function handleSend (text) {
         console.log(text)
     }
-    return (
-        <HashRouter>
-            <div className={styles.wrapper}>
-                <div >
-                    <Header />
-                </div>
-                <div className={styles.content}>
-                    <Switch>
-                        <Route path="/chat/list" exact component={ChatList} />
-                        <Route path="/address/list" component={AddressList} />
-                        <Route path="/found" component={Found} />
-                        <Route path="/me" component={Me} />
-                        <Route path="/user/:id" component={UserInfo} />
-                        <Route path="/session/:id" component={Session} />
-                    </Switch>
-                </div>
-                <Menu />
-                <Footer onSend={handleSend}/>
-            </div>
-        </HashRouter>
 
+    return (
+        <div className={styles.wrapper}>
+            <div >
+                <Header />
+            </div>
+            <div className={styles.content}>
+                <Switch>
+                    {renderRoutes(config)}
+                </Switch>
+            </div>
+            {
+                // 我的亲娘诶，这里怎么优化看起来才好看啊
+                (
+                    current.length &&
+                    current[0].route.meta &&
+                    current[0].route.meta.footer
+                ) ?
+                    <Footer onSend={handleSend} /> :
+                    <Menu />
+            }
+
+        </div>
     );
 }
 
-export default Router;
+export default withRouter(Router);

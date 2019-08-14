@@ -8,6 +8,8 @@ import Footer from '@/components/Footer';
 import config from './config';
 import styles from './styles.module.css';
 
+import ws from '@/services/websocket';
+
 function Router (props) {
     const current = matchRoutes(config, props.location.pathname);
     const metaInfo = current.length && current[0].route.meta;
@@ -18,6 +20,7 @@ function Router (props) {
 
     function handleSend (text) {
         console.log(text)
+        ws.send(text)
     }
 
     return (

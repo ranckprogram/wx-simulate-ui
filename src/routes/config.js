@@ -4,8 +4,14 @@ import Found from '@/views/Found';
 import Me from '@/views/Me';
 import UserInfo from '@/views/UserInfo';
 import Session from '@/views/Session';
+import Login from '@/views/Auth';
 
 const config = [
+  {
+    path: '/',
+    exact: true,
+    component: Login,
+  },
   {
     path: '/chat/list',
     component: ChatList,

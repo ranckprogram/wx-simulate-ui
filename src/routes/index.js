@@ -40,7 +40,7 @@ function Router (props) {
                     metaInfo.footer
                 ) ?
                     <Footer onSend={handleSend} /> :
-                    <Menu current={current[0].route.path} />
+                    <Menu current={current[0] && current[0].route.path} />
             }
 
         </div>
